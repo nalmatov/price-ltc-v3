@@ -1,7 +1,17 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from 'vite';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  server: {
+    port: 3000,
+    strictPort: true,
+    allowedHosts: [
+      'ltc-rates.com',
+      'www.ltc-rates.com',
+    ],
+  },
+  publicDir: 'public',
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true
+  }
+});
