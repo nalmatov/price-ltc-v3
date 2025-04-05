@@ -39,7 +39,7 @@ const Table = () => {
     try {
       const res = await fetch(`${BASE_API}/api/ltc-exchanges?${queryParams}`);
       const data = await res.json();
-  
+
       if (data?.data) {
         setCurrencies(data.data);
       }
