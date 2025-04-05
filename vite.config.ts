@@ -5,6 +5,7 @@ export default defineConfig({
     port: 3000,
     strictPort: true,
     allowedHosts: [
+      'localhost',
       'ltc-rates.com',
       'www.ltc-rates.com',
     ],
